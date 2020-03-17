@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+</head>
+
+<body>
+    <p><a href="/products/addnew">新增</a></p>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 300px;">商品id</th>
+                <th style="width: 300px;">商品名称</th>
+                <th style="width: 300px;">商品价格</th>
+                <th style="width: 300px;">商品描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item=>{%>
+                <tr>
+                    <td style="width: 300px; text-align: center;"><%= item.pid %></td>
+                    <td style="width: 300px; text-align: center;"><%= item.pname %></td>
+                    <td style="width: 300px; text-align: center;"><%= item.pprice %></td>
+                    <td style="width: 300px; text-align: center;"><%= item.pdesc %></td>
+                  </tr>
+            <%}) %>
+        </tbody>
+    </table>
+</body>
+
+</html>
